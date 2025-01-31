@@ -3,7 +3,7 @@ import { Inter, Abril_Fatface } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
-const abrilFatface = Abril_Fatface({ weight: '400', subsets: ['latin'] })
+// const abrilFatface = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Fashion',
