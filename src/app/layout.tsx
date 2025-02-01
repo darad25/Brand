@@ -1,9 +1,8 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
-// const abrilFatface = Abril_Fatface({ weight: '400', subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Fashion',
@@ -11,22 +10,27 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: 'href',
+        url: '/favicon-32x32.png',  // Use a valid path to your icon
         sizes: '32x32',
         type: 'image/png',
-      }
-    ]
-  }
-}
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+      </head>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
