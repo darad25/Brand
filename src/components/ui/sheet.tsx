@@ -16,11 +16,11 @@ const SheetClose = SheetPrimitive.Close
 const SheetPortal = ({
   className,
   ...props
-}: React.ComponentPropsWithoutRef<typeof SheetPrimitive.Portal>) => (
+}: React.ComponentPropsWithoutRef<typeof SheetPrimitive.Portal> & { className?: string }) => (
   <SheetPrimitive.Portal {...props}>
     <div className={cn(className)}>{props.children}</div>
   </SheetPrimitive.Portal>
-);
+)
 
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
